@@ -123,6 +123,7 @@ While looking at the original issue, proceed with local feature development and 
 (This project is done only with the develop and feature branches. There is no need for the master branch.)
 ```
 
+### Entity-relationship Diagram (ERD)
 ![スクリーンショット 2019-11-16 15 16 02](https://user-images.githubusercontent.com/35171408/68991813-31201180-08a6-11ea-9fdb-b828232d76e9.png)
 
 ### What does this application do, what kind of functions does it currently have?
