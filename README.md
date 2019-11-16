@@ -122,3 +122,51 @@ Use "git remote add" to link "origin" to your own GitHub URL
 While looking at the original issue, proceed with local feature development and submit a PullRequest to your GitHub
 (This project is done only with the develop and feature branches. There is no need for the master branch.)
 ```
+
+![スクリーンショット 2019-11-16 15 16 02](https://user-images.githubusercontent.com/35171408/68991813-31201180-08a6-11ea-9fdb-b828232d76e9.png)
+
+### What does this application do, what kind of functions does it currently have?
+i) dive into post app was developed to post your articles concerning for individual teams, creates its own team, and creates different agendas.
+
+After you can create your own account, you become able to perform other functions like creating your own team, agenda, and team members. Team members are possible to be invited any members through email.
+　
+For the created article, it is possible to add comments on it.
+
+ii)dive into post app has different functions such as the creation of article, creation of agenda and creation of article and you can edit, modify and delete it.
+
+Creation of teams and invitation of  menbers, you can add a comment on every articles in the team you belong to, modify or delete it whenever you want. 
+
+### Agenda.rb
+
+inside the model agenda.rd, we have a relationship of the team and user this means that only one agenda belongs to one team and one user, also only one agenda can have many articles and if we delete any article, it can be deleted everywhere it located in dive into post-app
+
+### Article.rb
+
+inside this model, there is a validation of title and content which means you can’t save the null value and the length size between 1 and 100,
+also there is a relationship that means only one article belongs to one user, team and Agenda. also, one article has can have many comments
+we have mount_uploader that will help us to upload an image from pc.
+
+### Assign.rb
+
+inside assign model there is a relationship that means that only one assign belongs to one user and team
+
+### Team.rb
+
+inside this model, we have validation of name that means that you can’t save with null in the name field and every name it can be unique not duplicate the same name
+
+there is also the relationship that means that only one team belongs to one owner
+-one team has many assigns and if we perform delete it cause to delete everywhere it located in our app.
+-one team has many members 
+-one team has many agenda and article if we delete it cause to be deleted everywhere it located in the project
+-mount uploader that causes to upload the image icon in team
+
+also, we perform the function that will invite individual user member
+User.rb
+
+-device authenticatable that means that the user will be able to authenticate with a login and password that are stored in the database, the user will be able to register, update, and destroy their profiles
+-there is a different relationship with the user that means that:
+
+.only one user has many teams 
+.only one user has many assign, teams, articles, agendas, and comments when we perform delete function it cause to delete everywhere located in our app
+.we have mount_uploader with that allow as to upload a profile picture of the user
+.also users allow performing every operation in the project like creating articles, agenda, team members and so on.
