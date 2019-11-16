@@ -3,6 +3,6 @@ class AgendaMailer < ApplicationMailer
     @agenda = agenda
     @team = team
     @email = email
-    mail to: @email, subject: I18n.t('views.messages.mail_delete_agenda')
+    mail to: @email, subject: I18n.t('mails.messages.delete_agenda')
   end
 end
