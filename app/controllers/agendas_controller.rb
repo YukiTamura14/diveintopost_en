@@ -29,7 +29,7 @@ class AgendasController < ApplicationController
       @agenda.destroy
       redirect_to dashboard_url, notice: I18n.t('views.messages.delete_agenda')
     else
-      redirect_to dashboard_url, notice: I18n.t('views.messages.can_not_delete_agenda')
+      redirect_to dashboard_url, notice: I18n.t('views.messages.cannot_delete_agenda')
     end
   end
 

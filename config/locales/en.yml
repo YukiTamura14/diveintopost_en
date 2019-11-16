@@ -215,9 +215,10 @@ en:
     pm: pm
   views:
     messages:
+      cannot_delete_user: 'Only the team leader or the user himself / herself has a permission.'
       create_agenda: 'Successfully created an agenda!'
       delete_agenda: 'Successfully deleted the agenda!'
-      can_not_delete_agenda: 'Agenda can be deleted only by the team leader or the user who created the agenda.'
+      cannot_delete_agenda: 'Agenda can be deleted only by the team leader or the user who created the agenda.'
       create_article: 'Successfully created an article!'
       update_article: 'Successfully updated the article!'
       assigned: 'Assigned!'
