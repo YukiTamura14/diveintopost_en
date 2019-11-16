@@ -122,6 +122,10 @@ Use "git remote add" to link "origin" to your own GitHub URL
 While looking at the original issue, proceed with local feature development and submit a PullRequest to your GitHub
 (This project is done only with the develop and feature branches. There is no need for the master branch.)
 ```
+### Screenshots when opening the application in a browser
+![スクリーンショット 2019-11-16 20 23 18](https://user-images.githubusercontent.com/35171408/68992499-a04e3380-08af-11ea-9b88-16c5a5fc0f14.png)
+
+![スクリーンショット 2019-11-16 20 24 42](https://user-images.githubusercontent.com/35171408/68992506-acd28c00-08af-11ea-93a7-cda0e10ab000.png)
 
 ### Entity-relationship Diagram (ERD)
 ![スクリーンショット 2019-11-16 15 16 02](https://user-images.githubusercontent.com/35171408/68991813-31201180-08a6-11ea-9fdb-b828232d76e9.png)
