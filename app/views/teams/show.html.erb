@@ -10,8 +10,10 @@
               <%= image_tag default_img(@team.icon_url), class: 'img' %><br>
               <%= @team.name %>
             </div>
-            <%= link_to I18n.t('views.messages.edit_team'), edit_team_path(@team), class: 'btn btn-success btn-block mt-3' %>
-          </div>
+              <% if @team.owner_id == current_user.id %>
+                <%= link_to I18n.t('views.messages.edit_team'), edit_team_path(@team), class: 'btn btn-success btn-block mt-3' %>
+              <% end %>
+            </div>
 
           <div class="col-md-8">
             <div>
@@ -41,7 +43,12 @@
                     <tr>
                       <td><%= image_tag 'default.jpg', size: '40x40' %></td>
                       <td><%= assign.user.email %></td>
-                      <td><%= link_to I18n.t('views.button.delete'), team_assign_path(@team, assign), method: :delete, class: 'btn btn-sm btn-danger' %></td>
+                      <% if assign.user_id == current_user.id || assign.team.owner == current_user %>
+                        <td><%= link_to I18n.t('views.button.delete'), team_assign_path(@team, assign), method: :delete, class: 'btn btn-sm btn-danger' %></td>
+                      <% end %>
+                      <% if @team.owner == current_user && @team.owner != assign.user %>
+                        <td><%= link_to I18n.t('views.button.change_leader'), transfer_owner_team_assign_path(@team, assign), method: :patch, class: 'btn btn-sm btn-danger' %></td>
+                      <% end %>
                     </tr>
                   <% end %>
                 </tbody>
