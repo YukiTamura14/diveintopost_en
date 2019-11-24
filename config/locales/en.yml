@@ -216,6 +216,9 @@ en:
   views:
     messages:
       create_agenda: 'Successfully created an agenda!'
+      delete_agenda: 'Successfully deleted the agenda!'
+      mail_delete_agenda: 'The agenda is deleted'
+      can_not_delete_agenda: 'Agenda can be deleted only by the team leader or the user who created the agenda.'
       create_article: 'Successfully created an article!'
       update_article: 'Successfully updated the article!'
       assigned: 'Assigned!'
@@ -261,6 +264,7 @@ en:
       edit_profile: 'Edit Profile'
       team_you_belong_to: 'The team you belong to'
       posted_articles: 'List of posted articles'
+      confirm: 'Are you sure?'
     button:
       submit: 'Submit'
       edit: 'Edit'
